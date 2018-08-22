@@ -22,10 +22,12 @@ spring:
 spring:
   profiles: dev
 cas:
-  prefixUrl: http://localhost:8443/cas
+  prefixUrl: https://passport.hope.com:8443/cas
   loginUrl: ${cas.prefixUrl}/login
   serviceUrl: http://localhost:${server.port}
   callbackUrl: ${cas.serviceUrl}/callback
+jwt:
+  salt: 8c728e685ddde9f7fbbc452155e29639 #md5("hope")
 debug: true
 server:
   port: 8083
