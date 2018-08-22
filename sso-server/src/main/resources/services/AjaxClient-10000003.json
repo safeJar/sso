@@ -1,0 +1,13 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^(https|imaps|http)://localhost:9090/.*",
+  "name": "AjaxClient-demo",
+  "id": 10000003,
+  "description": "AjaxClient-demo service",
+  "evaluationOrder": 100,
+  "theme":"ajax",
+  "logoutUrl": "http://localhost:9090/" ,
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

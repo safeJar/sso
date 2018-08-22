@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
  * @since 1.0.0
  */
 @RestController()
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 
 
