@@ -1,0 +1,24 @@
+#set($basePath=${rc.contextPath})
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript" src="http://localhost:9090/static/jquery-1.7.1.js" ></script>
+    <script type="text/javascript" src="http://localhost:9090/static/code.js" ></script>
+</head>
+<body>
+    <form method="post" action="https://passport.hope.com:8443/cas/login?service=http%3A%2F%2Flocalhost%3A9090%2Fuser%2Fcaslogin.jhtml" target="myIframe" >
+        <input type="text" name="username" id="username" /><br/>
+        <input type="text" name="password" id="password" /><br/>
+        <input type="hidden" name="_eventId" value="submit"/>
+        <input type="hidden" name="execution" value="$execution"/>
+        <input type="hidden" name="geolocation"/>
+        <input type="submit" value="登录">
+        #*<input type="button" value="登录" id="btn_login" onclick="login()" class="btn_login"/>*#
+    </form>
+
+    <iframe style="display:none;width:0;height:0" src="javasscript:void(0);" id="myIframe" name="myIframe" ></iframe>
+
+</body>
+</html>

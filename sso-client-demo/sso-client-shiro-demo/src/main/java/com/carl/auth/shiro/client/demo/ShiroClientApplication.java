@@ -6,7 +6,10 @@ package com.carl.auth.shiro.client.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author Carl
@@ -18,5 +21,9 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class ShiroClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(ShiroClientApplication.class, args);
+    }
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.build();
     }
 }

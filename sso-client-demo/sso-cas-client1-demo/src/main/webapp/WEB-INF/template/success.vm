@@ -1,0 +1,17 @@
+#set($basePath=${rc.contextPath})
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript" src="$basePath/static/jquery-1.7.1.js" ></script>
+    <script type="text/javascript" src="$basePath/static/code.js" ></script>
+
+</head>
+<body>
+    <a href="$basePath/index.jsp">查看用户</a>
+    <p>$msg</p>
+    <p>$TGC</p>
+    <p>$ticket</p>
+</body>
+</html>
