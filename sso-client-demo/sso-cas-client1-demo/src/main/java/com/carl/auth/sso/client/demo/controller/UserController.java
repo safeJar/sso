@@ -88,8 +88,7 @@ public class UserController {
     @RequestMapping("caslogin")
     public void caslogin(HttpServletRequest request,HttpServletResponse httpServletResponse,String ticket){
         Principal userPrincipal = request.getUserPrincipal();
-        String result = "parent.flightHandler('"+userPrincipal.getName()+"');";
-
+        String result = "flightHandler('"+userPrincipal.getName()+"');";
         try {
             httpServletResponse.getOutputStream().print(result);
         } catch (IOException e) {

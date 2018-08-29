@@ -139,12 +139,30 @@ function postData(){
 			async : false,   // 配置是否异步操作
 			dataType:"jsonp",
 			jsonpCallback:"flightHandler",
-			success : function(data){  // 回调操作
+			success : function(data, textStatus,xhr){  // 回调操作
 				console.log("success:"+data);
 				//alert("dd:"+data);
-			},  error: function(data){
+			},  error: function(xhr, textStatus, errorMsg){
 				//alert("ff:"+data);
 				console.log("error:"+data.status);
+				switch(xhr.status){
+					case 302:
+						//var tagetUrl = getTargetPath();
+						//用命名活密码没有填写的情况
+						//setCodeInfo("info",true,"登录成功,马上条撞到目标网站："+tagetUrl);
+
+						//只有这个地方，才是登录成功的。
+						//result = true;
+						//跳转服务
+						//window.location.href=tagetUrl;
+						alert("登录成功");
+						break;
+					case 401:
+						//验证失败的情况
+						//setCodeInfo("info",true,"用户名和密码有问题");
+						alert("用户名和密码有问题");
+						break;
+				}
 			}
 		});
 	}catch(e){
@@ -158,7 +176,7 @@ function postData(){
 
 function flightHandler(data){
 	alert("login success");
-	alert("gg:"+data);
+	window.location.href="http://localhost:9090/index.jsp";
 	
 }
 //---------------------------------------------------------------------

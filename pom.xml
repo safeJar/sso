@@ -21,6 +21,7 @@
         <module>sso-client-demo</module>
         <module>sso-support</module>
         <module>sso-monitor</module>
+        <module>ssodata</module>
     </modules>
 
 
